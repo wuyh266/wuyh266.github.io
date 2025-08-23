@@ -692,3 +692,38 @@ div#category {
 .avatar-img img:not(:hover) {
   animation: none !important;
 }
+
+/* 优化统计数据显示 */
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv,
+#busuanzi_container_page_pv {
+  display: inline-block;
+}
+
+/* 隐藏加载中的旋转圈 */
+#busuanzi_container_site_pv:empty::before,
+#busuanzi_container_site_uv:empty::before,
+#busuanzi_container_page_pv:empty::before {
+  content: "0";
+  color: var(--font-color);
+}
+
+/* 评论数显示优化 */
+.card-post-count {
+  display: inline-block;
+}
+
+.card-post-count:empty::before {
+  content: "0";
+  color: var(--font-color);
+}
+
+/* 加载超时处理 */
+.busuanzi-loading {
+  animation: none !important;
+}
+
+.busuanzi-loading::before {
+  content: "0" !important;
+  animation: none !important;
+}
